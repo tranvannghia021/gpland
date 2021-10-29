@@ -30,6 +30,7 @@
                     </div>
                     <div class="duan__1">
                         <div class="row grid wide">
+                            <form action="" style="display: flex;">
                             <div class="col l-2">
                                 <select name="" id="" class="select_input">
                                     <option value="">Khu Vực</option>
@@ -76,84 +77,44 @@
                             </div>
 
                             <div class="col l-2">
-                                <button class="duan_btn">Xóa Lựa chọn</button>
+                                <button class="duan_btn">TÌM KIẾM</button>
                             </div>
+                            </form>
                         </div>
                     </div>
                     <div class="duan__2">
 
                         <div class="row grid wide ">
+                            <?php
+                            require('./assets/class/connection.php');
+                            require('./assets/class/duan.php');
+                            $duan =new duan();
+                            foreach($duan->getAllduan() as $row){
+
+                         
+                            ?>
                             <div class="col l-4 " >
                                 <div class="duan_div">
                                     <div class="duan_img">
-                                        <img src="./assets/img/cty/1-ngay-training-du-an-cung-nhan-vien-moi-dia-oc-gp-land-1-scaled.jpg" alt="">
+                                        <img src="./assets/img/duan/<?php echo $row['Img_duan'];?>" alt="">
                                     </div>
                                     <div class="duan_body">
-                                        <h2>CENTURY CITY</h2>
+                                        <h2><?php echo $row['ten_duan']?></h2>
                                         <i class="fas fa-map-marker-alt"></i>
-                                        <p>ĐT769, Bình Sơn, Long Thành, Đồng Nai 810000, Vietnam</p>
-                                        <h3>GIÁ: 1.8 TỶ</h3>
+                                        <p><?php echo $row['diachi_duan']?></p>
+                                        <h3><?php echo $row['gia_duan']?></h3>
 
                                     </div>
-                                    <button class="duan__btn-pro">
+                                    <button class="duan__btn-pro" onclick="window.location.href='<?php echo $row['link_duan']?>'">
                                         XEM CHI TIẾT
                                     </button>
                                 </div>
                             </div>
-
-                            <div class="col l-4">
-                                <div class="duan_div">
-                                    <div class="duan_img">
-                                        <img src="./assets/img/cty/1-ngay-training-du-an-cung-nhan-vien-moi-dia-oc-gp-land-1-scaled.jpg" alt="">
-                                    </div>
-                                    <div class="duan_body">
-                                        <h2>CENTURY CITY</h2>
-                                        <i class="fas fa-map-marker-alt"></i>
-                                        <p>ĐT769, Bình Sơn, Long Thành, Đồng Nai 810000, Vietnam</p>
-                                        <h3>GIÁ: 1.8 TỶ</h3>
-
-                                    </div>
-                                    <button class="duan__btn-pro">
-                                        XEM CHI TIẾT
-                                    </button>
-                                </div>
-                            </div>
-
-                            <div class="col l-4">
-                                <div class="duan_div">
-                                    <div class="duan_img">
-                                        <img src="./assets/img/cty/1-ngay-training-du-an-cung-nhan-vien-moi-dia-oc-gp-land-1-scaled.jpg" alt="">
-                                    </div>
-                                    <div class="duan_body">
-                                        <h2>CENTURY CITY</h2>
-                                        <i class="fas fa-map-marker-alt"></i>
-                                        <p>ĐT769, Bình Sơn, Long Thành, Đồng Nai 810000, Vietnam</p>
-                                        <h3>GIÁ: 1.8 TỶ</h3>
-
-                                    </div>
-                                    <button class="duan__btn-pro">
-                                        XEM CHI TIẾT
-                                    </button>
-                                </div>
-                            </div>
-
-                            <div class="col l-4">
-                                <div class="duan_div">
-                                    <div class="duan_img">
-                                        <img src="./assets/img/cty/1-ngay-training-du-an-cung-nhan-vien-moi-dia-oc-gp-land-1-scaled.jpg" alt="">
-                                    </div>
-                                    <div class="duan_body">
-                                        <h2>CENTURY CITY</h2>
-                                        <i class="fas fa-map-marker-alt"></i>
-                                        <p>ĐT769, Bình Sơn, Long Thành, Đồng Nai 810000, Vietnam</p>
-                                        <h3>GIÁ: 1.8 TỶ</h3>
-
-                                    </div>
-                                    <button class="duan__btn-pro">
-                                        XEM CHI TIẾT
-                                    </button>
-                                </div>
-                            </div>
+                                <?php
+                           }
+                                
+                                ?>
+                            
                         </div>
                     </div>
                 </div>

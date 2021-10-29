@@ -31,7 +31,7 @@
                    <div class="model-btn">
                             <div class="model-body-mess hiden">
                                 <ul>
-                                    <a href=""><li><i class="fab fa-facebook-messenger"></i>
+                                    <a href="https://m.me/gpland.vn/"><li><i class="fab fa-facebook-messenger"></i>
                                     </li>Messenger</a>
                                 </ul>
                             </div>
