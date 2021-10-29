@@ -1,0 +1,36 @@
+.cty_div{
+    width: 90%;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+}
+.cty-img img{
+
+    width: 100%;
+}
+
+.cty_1{
+    background-color: #fff;
+    padding: 50px 0;
+   
+}
+.cty-body{
+    padding: 20px 10px;
+}
+.cty-body h3{
+    padding-bottom: 10px;
+}
+.cty-body p{
+    padding: 5px 0;
+}
+.cty-btn{
+    margin: 5px;
+    min-height: 30px;
+    background-color: var(--color-primary);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    min-width: 100px;
+}
+.cty-btn:hover{
+    background-color: var(--color-success);
+}

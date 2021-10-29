@@ -1,0 +1,101 @@
+.tuyedung__1{
+    
+    height:900px ;
+}
+.tuyendung-div{
+    background-color: #ccc;
+    border-radius: 25px;
+    margin: 10px;
+    min-height: 300px;
+}
+.tuyendung__3 h4{
+    padding: 10px 0;
+}
+.tuyendung__3 {
+    border: 1px solid #000;
+    margin-top: 20px;
+}
+.tuyendung__3 h2{
+    text-align: center;
+    padding: 20px 0;
+}
+.tuyendung_4{
+    padding: 30px 0;
+    float: right;
+    border-radius: 20px;
+}
+.tuyendung__body-form {
+    background-color: rgba(0, 0, 0, 0.6);
+    max-width: 700px  ;
+    min-height: 500px;
+    margin-right: 100px;
+    border-radius: 20px;
+    color: #fff;
+}
+.tuyendung_5{
+    padding: 20px 0;
+}
+.tuyendung__body-form h1{
+    font-size: 30px;
+    text-align: center;
+    padding: 10px 0;
+}
+.tuyendung__body-form h3{
+    text-align: center;
+    font-size: 20px;
+    padding: 5px 0;
+
+}
+.tuyendung__body-form p{
+    text-align: center;
+    font-size: 15px;
+}
+
+.tuyendung__body-form span{
+    text-align: center;
+}
+.tuyendung_form {
+    display: inline-block;
+    
+}
+.form-group{
+    text-align: center;
+    font-size: 40px;
+}
+.select-form,
+.form-control{
+    
+    min-width: 500px;
+    min-height: 40px;
+}
+.tuyendung__body-form form {
+    text-align: center;
+    padding: 20px 50px;
+}
+.select-form{
+margin: 15px 0;
+}
+.tuyendung_form >p>a{
+    text-decoration: none;
+    color: var(--color-btn);
+    font-weight: 700;
+}
+.tuyendung-btn{
+    min-height: 30px;
+    min-width: 100px;
+    display: block;
+    margin: 30px 50px;
+    background-color: var(--color-btn);
+    border: none;
+    border-radius: 2px;
+}
+.tuyendung-btn:hover{
+    background-color: var(--color-primary);
+}
+.form-message {
+    text-align: left;
+    font-size: 12px;
+ display: block;
+    padding: 4px 0 0;
+    color: red;
+}

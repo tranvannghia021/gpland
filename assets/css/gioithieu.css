@@ -1,0 +1,48 @@
+.gioithieu_1,.gioithieu_2{
+    background-color: #fff;
+
+}
+.gioithieu_1-logo{
+    text-align: center;
+    padding: 20px;
+}
+.gioithieu_1-logo img{
+    width: 200px;
+    
+}
+.gioithieu_2 h1,.gioithieu_2 h3,
+.gioithieu_1-body h3,
+.gioithieu_1-body h1{
+    text-align: center;
+    padding: 10px;
+}
+.gioithieu_1-body p{
+    line-height: 25px;
+    margin: 10px 0;
+}
+.gioithieu__row{
+    padding: 30px 0;
+}
+.gioithieu__div{
+    background-color: rgba(0, 0, 0, 0.1);
+    min-height:450px;
+    padding: 20px;
+    margin-top: 20px;
+}
+.gioithieu__icon{
+    font-size: 40px;
+    padding: 20px;
+}
+.gioithieu__div span{
+    font-weight:700 ;
+}
+.video-gioithieu{
+    padding: 20px 0;
+}
+.gioithieu_2-row h1{
+    padding: 20px 0;
+}
+.gioithieu_2-row p{
+    margin-top: 10px;
+    line-height: 25px;
+}
