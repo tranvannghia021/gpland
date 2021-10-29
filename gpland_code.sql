@@ -2,10 +2,10 @@
 -- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 29, 2021 lúc 08:16 AM
--- Phiên bản máy phục vụ: 10.4.21-MariaDB
--- Phiên bản PHP: 7.4.24
+-- Host: 127.0.0.1
+-- Generation Time: Oct 29, 2021 at 12:08 PM
+-- Server version: 10.4.21-MariaDB
+-- PHP Version: 7.4.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,22 +18,22 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Cơ sở dữ liệu: `gpland_code`
+-- Database: `gpland_code`
 --
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `tbl_doitac`
+-- Table structure for table `tbl_doitac`
 --
 
 CREATE TABLE `tbl_doitac` (
   `id_doitac` int(11) NOT NULL,
-  `doitac` varchar(500) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `doitac` varchar(100) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `tbl_doitac`
+-- Dumping data for table `tbl_doitac`
 --
 
 INSERT INTO `tbl_doitac` (`id_doitac`, `doitac`) VALUES
@@ -51,20 +51,47 @@ INSERT INTO `tbl_doitac` (`id_doitac`, `doitac`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `tbl_imggpland`
+-- Table structure for table `tbl_duan`
+--
+
+CREATE TABLE `tbl_duan` (
+  `id_duan` int(11) NOT NULL,
+  `ten_duan` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `diachi_duan` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
+  `gia_duan` float NOT NULL,
+  `Img_duan` text COLLATE utf8_unicode_ci NOT NULL,
+  `link_duan` text COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `tbl_duan`
+--
+
+INSERT INTO `tbl_duan` (`id_duan`, `ten_duan`, `diachi_duan`, `gia_duan`, `Img_duan`, `link_duan`) VALUES
+(1, 'CENTURY CITY', 'ĐT769, Bình Sơn, Long Thành, Đồng Nai 810000, Vietnam', 1.8, 'duan1.jpeg', 'https://gpland.vn/century-city/'),
+(2, 'GEM SKY WORLD', 'Long Đức - Lộc An, An Phước, Long Thành, Đồng Nai, Việt Nam', 4.3, 'duan2.jpg', 'https://gpland.vn/gem-sky-world-long-thanh/'),
+(3, 'ID JUNCTION', 'QX83+3CM, TT. Long Thành, Long Thành, Đồng Nai, Việt Nam', 5.7, 'duan3.jpg', 'https://gpland.vn/id-junction-long-thanh/'),
+(4, 'OPAL SKYLINE', 'Nguyễn Văn Tiết, Lái Thiêu, Thuận An, Bình Dương, Việt Nam', 1, 'duan4.jpeg', 'https://gpland.vn/can-ho-opal-skyline-binh-duong/'),
+(5, 'THE FUSION', 'QL56, Nghĩa Thành, Châu Đức, Bà Rịa - Vũng Tàu, Việt Nam', 1.3, 'duan5.jpg', 'https://gpland.vn/the-fusion-ba-ria/'),
+(6, 'THE RIVANA', 'Đường Vĩnh Phú 31, Vĩnh Phú, Thuận An, Bình Dương, Vietnam', 1.4, 'duan6.jpeg', 'https://gpland.vn/the-rivana/');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_imggpland`
 --
 
 CREATE TABLE `tbl_imggpland` (
   `id_imggpland` int(11) NOT NULL,
-  `id_img` int(11) NOT NULL,
-  `img` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `id-img` int(11) NOT NULL,
+  `img` text COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `tbl_imggpland`
+-- Dumping data for table `tbl_imggpland`
 --
 
-INSERT INTO `tbl_imggpland` (`id_imggpland`, `id_img`, `img`) VALUES
+INSERT INTO `tbl_imggpland` (`id_imggpland`, `id-img`, `img`) VALUES
 (1, 1, 'anh1_1.jpg'),
 (2, 1, 'anh2_1.jpg'),
 (3, 1, 'anh3_1.jpg'),
@@ -117,33 +144,45 @@ INSERT INTO `tbl_imggpland` (`id_imggpland`, `id_img`, `img`) VALUES
 (50, 3, 'anh4_3.jpg');
 
 --
--- Chỉ mục cho các bảng đã đổ
+-- Indexes for dumped tables
 --
 
 --
--- Chỉ mục cho bảng `tbl_doitac`
+-- Indexes for table `tbl_doitac`
 --
 ALTER TABLE `tbl_doitac`
   ADD PRIMARY KEY (`id_doitac`);
 
 --
--- Chỉ mục cho bảng `tbl_imggpland`
+-- Indexes for table `tbl_duan`
+--
+ALTER TABLE `tbl_duan`
+  ADD PRIMARY KEY (`id_duan`);
+
+--
+-- Indexes for table `tbl_imggpland`
 --
 ALTER TABLE `tbl_imggpland`
   ADD PRIMARY KEY (`id_imggpland`);
 
 --
--- AUTO_INCREMENT cho các bảng đã đổ
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT cho bảng `tbl_doitac`
+-- AUTO_INCREMENT for table `tbl_doitac`
 --
 ALTER TABLE `tbl_doitac`
   MODIFY `id_doitac` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- AUTO_INCREMENT cho bảng `tbl_imggpland`
+-- AUTO_INCREMENT for table `tbl_duan`
+--
+ALTER TABLE `tbl_duan`
+  MODIFY `id_duan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `tbl_imggpland`
 --
 ALTER TABLE `tbl_imggpland`
   MODIFY `id_imggpland` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
